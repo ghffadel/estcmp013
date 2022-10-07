@@ -5,10 +5,9 @@ def LCS (X, Y, m, n):
         return 0
     
     # Se os últimos caracteres de ambas as strings forem iguais, a busca continua descartando-os
-    elif X[m - 1] == Y[n - 1];
-        return lcs(X, Y, m - 1, n - 1) + 1
+    elif X[m - 1] == Y[n - 1]:
+        return LCS(X, Y, m - 1, n - 1) + 1
         
     # Caso contrário, a resposta será a melhor entre as duas novas buscas
     else:
-        return max(lcs(X, Y, m - 1, n) + lcs(X, Y, m, n - 1))
-        
+        return max(LCS(X, Y, m - 1, n) + LCS(X, Y, m, n - 1))

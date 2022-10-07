@@ -1,3 +1,5 @@
+# Arquivo para testar o tempo de execução do mesmo algoritmo em duas abordagens diferentes: força bruta e programação dinâmica
+
 from random import randint, seed
 from timeit import default_timer as timer
 

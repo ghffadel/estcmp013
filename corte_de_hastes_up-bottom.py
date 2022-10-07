@@ -1,3 +1,6 @@
+# Definindo o valor infinito
+infinity = float('inf')
+
 # Implementação up-bottom do algoritmo do corte de hastes
 def cut_rod (prices, n):
     # Caso-base, onde para o tamanho igual a 0 não há como dividi-lo

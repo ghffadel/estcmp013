@@ -2,13 +2,6 @@
 def lcs (X, Y, m, n):
     # Criação da tabela de respostas
     results = [[0 for j in range(n + 1)] for i in range(m + 1)]
-    
-    # Definição dos casos-base
-    for i in range(m + 1):
-        results[i][0] = 0
-        
-    for j in range(n + 1):
-        results[0][j] = 0
         
     # Preenchimento da tabela de respostas
     for i in range(1, m + 1):

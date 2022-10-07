@@ -8,7 +8,7 @@ def knapsack (weights, values, maximum_capacity):
     table = [0 for i in range(length + 1)]
     
     # Resolução dos subproblemas
-    for i in range(1, n + 1):
+    for i in range(1, length + 1):
         for j in range(maximum_capacity, -1, -1):
             # Verifica se é possível incluir o item atual na mochila
             if weights[i - 1] <= j:

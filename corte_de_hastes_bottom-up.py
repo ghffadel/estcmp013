@@ -1,3 +1,6 @@
+# Definindo o valor infinito
+infinity = float('inf')
+
 # Implementação bottom-up do algoritmo do corte de hastes 
 def cut_rod (prices, n):
     # Inicialização da lista que armazena as respostas
@@ -21,4 +24,3 @@ def cut_rod (prices, n):
     
     # Retorna a resposta para o tamanho n
     return results[n]
-

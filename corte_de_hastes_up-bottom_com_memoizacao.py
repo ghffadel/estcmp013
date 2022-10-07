@@ -1,8 +1,12 @@
-# Inicialização da lista de memoização, onde os resultados serão armazenados
-memoization = [-infinity for i in range(n + 1)]
+# Definindo o valor infinito
+infinity = float('inf')
   
 # Implementação up-bottom com memoização do algoritmo do corte de hastes 
-def cut_rod (prices, n, memoization):
+def cut_rod (prices, n, memoization = None):
+    # Se a tabela de memoização não for passada no parâmetro, há a criação de uma com todas as posições tendo o menor valor possível.
+    if memoization is None:
+       memoization = [-infinity for i in range(n + 1)]
+
     # Verifica a lista de memoização se o problema já foi resolvido anteriormente para o tamanho n
     if memoization[n] != -infinity:
         return memoization[n]
@@ -25,8 +29,3 @@ def cut_rod (prices, n, memoization):
     
     # Retorna a resposta
     return answer
-    
-    
-    
-    
-
